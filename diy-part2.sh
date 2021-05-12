@@ -12,10 +12,6 @@
 # 修改openwrt登陆地址,把下面的192.168.2.1修改成你想要的就可以了，其他的不要动
 sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generate
 
-#添加全新的argon主题
-#cd lede/package/lean
-#rm -rf luci-theme-argon 
-#git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git
 
 #更换默认主题为argon，并删除bootstrap主题
 #sed -i 's#luci-theme-bootstrap#luci-theme-argon#g' feeds/luci/collections/luci/Makefile
