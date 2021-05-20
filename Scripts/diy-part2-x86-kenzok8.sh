@@ -33,5 +33,3 @@ chmod -R 755 ./package/luci-app-wolplus/*
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-socat ./package/luci-app-socat
 chmod -R 755 ./package/luci-app-socat/*
 
-#替换为sirpdboy中文版netdata
-rm -rf ./package/lean/luci-app-netdata && git clone https://github.com/sirpdboy/luci-app-netdata.git package/lean/luci-app-netdata
