@@ -38,6 +38,7 @@ git clone https://github.com/jerrykuku/lua-maxminddb.git package/lean/lua-maxmin
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-socat ./package/luci-app-socat
 chmod -R 755 ./package/luci-app-socat/*
 
-#以下为测试sqm翻译错误，尝试更正
-sed -i 's/(/var/run/sqm/${Interface_name}.[start|stop]-sqm.log)。/:/g' feeds/luci/applications/luci-app-sqm/po/zh-cn/sqm.po
-sed -i 's/日志等级。/日志类型/g' feeds/luci/applications/luci-app-sqm/po/zh-cn/sqm.po
+#添加luci-app-sqm（更正了翻译细节）测试
+rm -rf ./feeds/luci/applications/luci-app-sqm
+svn co https://github.com/jiawm/luci-app-sqm ./package/luci-app-sqm
+chmod -R 755 ./package/luci-app-sqm/*
