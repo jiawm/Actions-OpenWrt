@@ -39,5 +39,5 @@ svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-socat ./packa
 chmod -R 755 ./package/luci-app-socat/*
 
 #以下为测试sqm翻译错误，尝试更正
-sed -i 's/(/var/run/sqm/${Interface_name}.[start|stop]-sqm.log)。/ /g' feeds/luci/applications/luci-app-sqm/po/zh-cn/sqm.po
-sed -i 's/日志等级。/输出到系统日志类型/g' feeds/luci/applications/luci-app-sqm/po/zh-cn/sqm.po
+sed -i 's/(/var/run/sqm/${Interface_name}.[start|stop]-sqm.log)。/:/g' feeds/luci/applications/luci-app-sqm/po/zh-cn/sqm.po
+sed -i 's/日志等级。/日志类型/g' feeds/luci/applications/luci-app-sqm/po/zh-cn/sqm.po
