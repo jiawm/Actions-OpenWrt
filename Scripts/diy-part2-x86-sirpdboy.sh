@@ -39,5 +39,5 @@ svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-socat ./packa
 chmod -R 755 ./package/luci-app-socat/*
 
 #添加luci-app-sqm（更正了翻译细节）测试
-svn co https://github.com/jiawm/luci/tree/master/applications/luci-app-sqm ./feeds/luci/applications/luci-app-sqm
+svn co https://github.com/jiawm/luci/applications/trunk/luci-app-sqm ./feeds/luci/applications/luci-app-sqm
 chmod -R 755 ./feeds/luci/applications/luci-app-sqm/*
