@@ -37,11 +37,11 @@ chmod -R 755 ./package/luci-app-wolplus/*
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-socat ./package/luci-app-socat
 chmod -R 755 ./package/luci-app-socat/*
 
-# Add ADGuardHome 目前kenzok8的源码有问题，临时替换为sirpdboy源码
-rm -rf package/kenzo/adguardhome
-rm -rf package/kenzo/luci-app-adguardhome
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-adguardhome ./package/luci-app-adguardhome
-chmod -R 755 ./package/luci-app-adguardhome/*
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/adguardhome ./package/adguardhome
-sed -i 's/        /	/g' ./package/adguardhome/Makefile
-chmod -R 755 ./package/adguardhome/*
+# Add ADGuardHome 可以替换为sirpdboy
+#rm -rf package/kenzo/adguardhome
+#rm -rf package/kenzo/luci-app-adguardhome
+#svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-adguardhome ./package/luci-app-adguardhome
+#chmod -R 755 ./package/luci-app-adguardhome/*
+#svn co https://github.com/sirpdboy/sirpdboy-package/trunk/adguardhome ./package/adguardhome
+#sed -i 's/        /	/g' ./package/adguardhome/Makefile
+#chmod -R 755 ./package/adguardhome/*
