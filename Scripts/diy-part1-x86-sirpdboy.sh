@@ -21,4 +21,6 @@ git clone https://github.com/jiawm/luci-app-poweroff.git package/poweroff
 git clone https://github.com/linkease/nas-packages.git package/nas #添加ddnsto和linkease
 git clone https://github.com/sirpdboy/sirpdboy-package.git package/sirpdboy
 #替换为sirpdboy中文版netdata
-rm -rf ./package/lean/luci-app-netdata && git clone https://github.com/sirpdboy/luci-app-netdata.git package/lean/luci-app-netdata
+#rm -rf ./package/lean/luci-app-netdata && git clone https://github.com/sirpdboy/luci-app-netdata.git package/lean/luci-app-netdata
+#删除lean大的netdata
+rm -rf ./package/lean/luci-app-netdata
