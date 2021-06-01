@@ -22,3 +22,4 @@ git clone https://github.com/linkease/nas-packages.git package/nas #添加ddnsto
 git clone https://github.com/sirpdboy/sirpdboy-package.git package/sirpdboy
 
 
+rm -rf .package/sirpdboy/luci-app-adguardhome
