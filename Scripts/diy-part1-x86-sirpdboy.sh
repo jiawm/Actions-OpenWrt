@@ -23,3 +23,4 @@ git clone https://github.com/sirpdboy/sirpdboy-package.git package/sirpdboy
 
 
 rm -rf .package/sirpdboy/luci-app-adguardhome
+rm -rf .package/sirpdboy/adguardhome
