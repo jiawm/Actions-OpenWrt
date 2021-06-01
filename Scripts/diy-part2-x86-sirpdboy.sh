@@ -43,3 +43,10 @@ chmod -R 755 ./package/luci-app-socat/*
 #rm -rf ./package/lean/luci-app-netdata 
 #svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-netdata ./package/luci-app-netdata
 #chmod -R 755 ./package/luci-app-netdata/*
+
+# Add ADGuardHome
+svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-adguardhome ./package/luci-app-adguardhome
+chmod -R 755 ./package/luci-app-adguardhome/*
+svn co https://github.com/sirpdboy/sirpdboy-package/trunk/adguardhome ./package/adguardhome
+# sed -i 's/        /	/g' ./package/adguardhome/Makefile
+chmod -R 755 ./package/adguardhome/*
