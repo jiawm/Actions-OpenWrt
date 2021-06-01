@@ -21,9 +21,7 @@ sed -i 's/bootstrap/argon/g' feeds/luci/modules/luci-base/root/etc/config/luci
 rm -rf ./package/lean/luci-theme-argon && git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon  
 
 # Change default BackGround img
-# rm ./package/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg
-wget -O ./package/lean/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg https://github.com/xylz0928/Openwrt-Make-x86_7621/raw/main/BigSurLight.jpg
-
+wget -O ./package/lean/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg https://github.com/jiawm/My-OpenWrt-by-Lean/raw/main/BackGround/1.jpg
 
 #git lua-maxminddb 依赖
 git clone https://github.com/jerrykuku/lua-maxminddb.git package/lean/lua-maxminddb
@@ -38,7 +36,4 @@ svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-socat ./packa
 chmod -R 755 ./package/luci-app-socat/*
 
 
-#替换为sirpdboy中文版netdata
-#rm -rf ./package/lean/luci-app-netdata 
-#svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-netdata ./package/luci-app-netdata
-#chmod -R 755 ./package/luci-app-netdata/*
+
