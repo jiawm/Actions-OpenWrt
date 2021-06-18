@@ -40,9 +40,9 @@ chmod -R 755 ./package/luci-app-socat/*
 
 
 #替换为sirpdboy中文版netdata
-#rm -rf ./package/lean/luci-app-netdata 
-#svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-netdata ./package/luci-app-netdata
-#chmod -R 755 ./package/luci-app-netdata/*
+rm -rf ./package/lean/luci-app-netdata 
+svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-netdata ./package/luci-app-netdata
+chmod -R 755 ./package/luci-app-netdata/*
 
 # Add ADGuardHome
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-adguardhome ./package/luci-app-adguardhome
