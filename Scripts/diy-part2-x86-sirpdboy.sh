@@ -50,3 +50,6 @@ chmod -R 755 ./package/luci-app-adguardhome/*
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/adguardhome ./package/adguardhome
 # sed -i 's/        /	/g' ./package/adguardhome/Makefile
 chmod -R 755 ./package/adguardhome/*
+
+#S大dockerman报错，删除
+rm -rf ./package/sirpdboy/luci-app-dockerman 
