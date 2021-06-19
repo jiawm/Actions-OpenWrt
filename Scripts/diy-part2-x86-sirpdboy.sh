@@ -78,6 +78,9 @@ chmod -R 755 ./package/luci-app-advanced/*
 rm -rf ./package/lean/luci-app-netdata 
 svn co https://github.com/sirpdboy/luci-app-netdata ./package/luci-app-netdata
 chmod -R 755 ./package/luci-app-netdata/*
+svn co https://github.com/sirpdboy/sirpdboy-package/trunk/netdata ./package/netdata
+chmod -R 755 ./package/netdata/*
+
 
 # Add ADGuardHome sirpdboy版
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-adguardhome ./package/luci-app-adguardhome
