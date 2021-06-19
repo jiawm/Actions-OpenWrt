@@ -26,23 +26,23 @@ sed -i 's/-luci-app-flowoffload//g' target/linux/x86/Makefile
 sed -i 's/kmod-drm-amdgpu \\/kmod-drm-amdgpu/g' target/linux/x86/Makefile
 
 #添加主题
-git clone https://github.com/sirpdboy/luci-theme-opentopd package/luci-theme-opentopd
+#git clone https://github.com/sirpdboy/luci-theme-opentopd package/luci-theme-opentopd
 
 #更换默认主题为opentopd，并删除bootstrap主题
 sed -i 's#luci-theme-bootstrap#luci-theme-opentopd#g' feeds/luci/collections/luci/Makefile
 sed -i 's/bootstrap/opentopd/g' feeds/luci/modules/luci-base/root/etc/config/luci
 
 # Add ServerChan
-git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-serverchan
+#git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-serverchan
 
 # Add Onliner
-git clone https://github.com/rufengsuixing/luci-app-onliner.git package/luci-app-onliner
+#git clone https://github.com/rufengsuixing/luci-app-onliner.git package/luci-app-onliner
 
 # Add OpenAppFilter
-git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
+#git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 
 # Add Passwall
-git clone https://github.com/xiaorouji/openwrt-passwall package/openwrt-passwall
+#git clone https://github.com/xiaorouji/openwrt-passwall package/openwrt-passwall
 
 # Add OpenClash
 git clone -b master https://github.com/vernesong/OpenClash.git package/OpenClash
@@ -61,17 +61,17 @@ git clone https://github.com/jerrykuku/lua-maxminddb.git package/lean/lua-maxmin
 
 # Add WOL Plus 
 #svn co https://github.com/sundaqiang/openwrt-packages/trunk/luci-app-services-wolplus ./package/luci-app-wolplus
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-services-wolplus ./package/luci-app-wolplus
-chmod -R 755 ./package/luci-app-wolplus/*
+#svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-services-wolplus ./package/luci-app-wolplus
+#chmod -R 755 ./package/luci-app-wolplus/*
 
 # Add luci-app-socat
 # svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-socat ./package/luci-app-socat
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-socat ./package/luci-app-socat
-chmod -R 755 ./package/luci-app-socat/*
+#svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-socat ./package/luci-app-socat
+#chmod -R 755 ./package/luci-app-socat/*
 
 # Add luci-app-advanced sirpdboy版
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-advanced ./package/luci-app-advanced
-chmod -R 755 ./package/luci-app-advanced/*
+#svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-advanced ./package/luci-app-advanced
+#chmod -R 755 ./package/luci-app-advanced/*
 
 
 #替换为sirpdboy中文版netdata
@@ -85,26 +85,26 @@ chmod -R 755 ./package/netdata/*
 
 
 # Add ADGuardHome sirpdboy版
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-adguardhome ./package/luci-app-adguardhome
-chmod -R 755 ./package/luci-app-adguardhome/*
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/adguardhome ./package/adguardhome
-chmod -R 755 ./package/adguardhome/*
+#svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-adguardhome ./package/luci-app-adguardhome
+#chmod -R 755 ./package/luci-app-adguardhome/*
+#svn co https://github.com/sirpdboy/sirpdboy-package/trunk/adguardhome ./package/adguardhome
+#chmod -R 755 ./package/adguardhome/*
 
 #添加sirpdboy app
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-control-weburl ./package/luci-app-control-weburl
-chmod -R 755 ./package/luci-app-control-weburl/*
+#svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-control-weburl ./package/luci-app-control-weburl
+#chmod -R 755 ./package/luci-app-control-weburl/*
 
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-cpulimit ./package/luci-app-cpulimit
-chmod -R 755 ./package/luci-app-cpulimit/*
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/cpulimit ./package/cpulimit
-chmod -R 755 ./package/cpulimit/*
+#svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-cpulimit ./package/luci-app-cpulimit
+#chmod -R 755 ./package/luci-app-cpulimit/*
+#svn co https://github.com/sirpdboy/sirpdboy-package/trunk/cpulimit ./package/cpulimit
+#chmod -R 755 ./package/cpulimit/*
 
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-autotimeset ./package/luci-app-autotimeset
-chmod -R 755 ./package/luci-app-autotimeset/*
+#svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-autotimeset ./package/luci-app-autotimeset
+#chmod -R 755 ./package/luci-app-autotimeset/*
 
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-aria2 ./package/luci-app-aria2
-chmod -R 755 ./package/luci-app-aria2/*
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/aria2 ./package/aria2
-chmod -R 755 ./package/aria2/*
+#svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-aria2 ./package/luci-app-aria2
+#chmod -R 755 ./package/luci-app-aria2/*
+#svn co https://github.com/sirpdboy/sirpdboy-package/trunk/aria2 ./package/aria2
+#chmod -R 755 ./package/aria2/*
 
 
