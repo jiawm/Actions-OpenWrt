@@ -13,9 +13,36 @@
 sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generate
 
 
+# Remove the default apps 移除默认编译app，不是移除app
+sed -i 's/luci-app-zerotier //g' target/linux/x86/Makefile
+sed -i 's/luci-app-unblockmusic //g' target/linux/x86/Makefile
+sed -i 's/luci-app-xlnetacc //g' target/linux/x86/Makefile
+sed -i 's/luci-app-jd-dailybonus //g' target/linux/x86/Makefile
+sed -i 's/luci-app-ipsec-vpnd //g' target/linux/x86/Makefile
+sed -i 's/luci-app-adbyby-plus //g' target/linux/x86/Makefile
+sed -i 's/luci-app-sfe //g' target/linux/x86/Makefile
+sed -i 's/luci-app-uugamebooster//g' target/linux/x86/Makefile
+sed -i 's/-luci-app-flowoffload//g' target/linux/x86/Makefile
+sed -i 's/kmod-drm-amdgpu \\/kmod-drm-amdgpu/g' target/linux/x86/Makefile
+
 #更换默认主题为opentopd，并删除bootstrap主题
 sed -i 's#luci-theme-bootstrap#luci-theme-opentopd#g' feeds/luci/collections/luci/Makefile
 sed -i 's/bootstrap/opentopd/g' feeds/luci/modules/luci-base/root/etc/config/luci
+
+# Add ServerChan
+git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-serverchan
+
+# Add Onliner
+git clone https://github.com/rufengsuixing/luci-app-onliner.git package/luci-app-onliner
+
+# Add OpenAppFilter
+git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
+
+# Add Passwall
+git clone https://github.com/xiaorouji/openwrt-passwall package/openwrt-passwall
+
+# Add OpenClash
+git clone -b master https://github.com/vernesong/OpenClash.git package/OpenClash
 
 #删除lean大集成的旧版argon主题，更换为新版argon主题，lean中新版主题为arton-new
 rm -rf ./package/lean/luci-theme-argon && git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon  
@@ -30,13 +57,17 @@ wget -O ./package/lean/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg htt
 git clone https://github.com/jerrykuku/lua-maxminddb.git package/lean/lua-maxminddb
 
 # Add WOL Plus s大包有该软件
-#svn co https://github.com/sundaqiang/openwrt-packages/trunk/luci-app-services-wolplus ./package/luci-app-wolplus
-#chmod -R 755 ./package/luci-app-wolplus/*
+svn co https://github.com/sundaqiang/openwrt-packages/trunk/luci-app-services-wolplus ./package/luci-app-wolplus
+chmod -R 755 ./package/luci-app-wolplus/*
 
 # Add luci-app-socat
 # svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-socat ./package/luci-app-socat
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-socat ./package/luci-app-socat
 chmod -R 755 ./package/luci-app-socat/*
+
+# Add luci-app-advanced
+svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-advanced ./package/luci-app-advanced
+chmod -R 755 ./package/luci-app-advanced/*
 
 
 #替换为sirpdboy中文版netdata
