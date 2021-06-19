@@ -9,7 +9,7 @@
 # File name: diy-part2.sh
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 #
-# 修改openwrt登陆地址,把下面的192.168.2.1修改成你想要的就可以了，其他的不要动
+#修改openwrt登陆地址,把下面的192.168.2.1修改成你想要的就可以了，其他的不要动
 sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generate
 
 
@@ -24,6 +24,9 @@ sed -i 's/luci-app-sfe //g' target/linux/x86/Makefile
 sed -i 's/luci-app-uugamebooster//g' target/linux/x86/Makefile
 sed -i 's/-luci-app-flowoffload//g' target/linux/x86/Makefile
 sed -i 's/kmod-drm-amdgpu \\/kmod-drm-amdgpu/g' target/linux/x86/Makefile
+
+#添加主题
+git clone https://github.com/sirpdboy/luci-theme-opentopd package/luci-theme-opentopd
 
 #更换默认主题为opentopd，并删除bootstrap主题
 sed -i 's#luci-theme-bootstrap#luci-theme-opentopd#g' feeds/luci/collections/luci/Makefile
@@ -56,8 +59,9 @@ wget -O ./package/lean/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg htt
 #git lua-maxminddb 依赖
 git clone https://github.com/jerrykuku/lua-maxminddb.git package/lean/lua-maxminddb
 
-# Add WOL Plus s大包有该软件
-svn co https://github.com/sundaqiang/openwrt-packages/trunk/luci-app-services-wolplus ./package/luci-app-wolplus
+# Add WOL Plus 
+#svn co https://github.com/sundaqiang/openwrt-packages/trunk/luci-app-services-wolplus ./package/luci-app-wolplus
+svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-services-wolplus ./package/luci-app-wolplus
 chmod -R 755 ./package/luci-app-wolplus/*
 
 # Add luci-app-socat
@@ -65,7 +69,7 @@ chmod -R 755 ./package/luci-app-wolplus/*
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-socat ./package/luci-app-socat
 chmod -R 755 ./package/luci-app-socat/*
 
-# Add luci-app-advanced
+# Add luci-app-advanced sirpdboy版
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-advanced ./package/luci-app-advanced
 chmod -R 755 ./package/luci-app-advanced/*
 
@@ -75,12 +79,27 @@ rm -rf ./package/lean/luci-app-netdata
 svn co https://github.com/sirpdboy/luci-app-netdata ./package/luci-app-netdata
 chmod -R 755 ./package/luci-app-netdata/*
 
-# Add ADGuardHome
+# Add ADGuardHome sirpdboy版
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-adguardhome ./package/luci-app-adguardhome
 chmod -R 755 ./package/luci-app-adguardhome/*
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/adguardhome ./package/adguardhome
-# sed -i 's/        /	/g' ./package/adguardhome/Makefile
 chmod -R 755 ./package/adguardhome/*
 
-#S大dockerman报错，删除
-rm -rf ./package/sirpdboy/luci-app-dockerman 
+#添加sirpdboy app
+svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-control-weburl ./package/luci-app-control-weburl
+chmod -R 755 ./package/luci-app-control-weburl/*
+
+svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-cpulimit ./package/luci-app-cpulimit
+chmod -R 755 ./package/luci-app-cpulimit/*
+svn co https://github.com/sirpdboy/sirpdboy-package/trunk/cpulimit ./package/cpulimit
+chmod -R 755 ./package/cpulimit/*
+
+svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-autotimeset ./package/luci-app-autotimeset
+chmod -R 755 ./package/luci-app-autotimeset/*
+
+svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-aria2 ./package/luci-app-aria2
+chmod -R 755 ./package/luci-app-aria2/*
+svn co https://github.com/sirpdboy/sirpdboy-package/trunk/aria2 ./package/aria2
+chmod -R 755 ./package/aria2/*
+
+
