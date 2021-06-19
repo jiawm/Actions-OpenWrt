@@ -107,4 +107,7 @@ chmod -R 755 ./package/netdata/*
 #svn co https://github.com/sirpdboy/sirpdboy-package/trunk/aria2 ./package/aria2
 #chmod -R 755 ./package/aria2/*
 
+#sirpdboy qt5报错删除
+rm -rf ./package/sirpdboy/qt5
+
 
