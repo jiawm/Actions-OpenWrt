@@ -69,9 +69,6 @@ git clone https://github.com/jerrykuku/lua-maxminddb.git package/lean/lua-maxmin
 #svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-socat ./package/luci-app-socat
 #chmod -R 755 ./package/luci-app-socat/*
 
-# Add luci-app-advanced sirpdboy版
-#svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-advanced ./package/luci-app-advanced
-#chmod -R 755 ./package/luci-app-advanced/*
 
 
 #替换为sirpdboy中文版netdata
@@ -84,28 +81,6 @@ svn co https://github.com/sirpdboy/sirpdboy-package/trunk/netdata ./package/netd
 chmod -R 755 ./package/netdata/*
 
 
-# Add ADGuardHome sirpdboy版
-#svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-adguardhome ./package/luci-app-adguardhome
-#chmod -R 755 ./package/luci-app-adguardhome/*
-#svn co https://github.com/sirpdboy/sirpdboy-package/trunk/adguardhome ./package/adguardhome
-#chmod -R 755 ./package/adguardhome/*
-
-#添加sirpdboy app
-#svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-control-weburl ./package/luci-app-control-weburl
-#chmod -R 755 ./package/luci-app-control-weburl/*
-
-#svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-cpulimit ./package/luci-app-cpulimit
-#chmod -R 755 ./package/luci-app-cpulimit/*
-#svn co https://github.com/sirpdboy/sirpdboy-package/trunk/cpulimit ./package/cpulimit
-#chmod -R 755 ./package/cpulimit/*
-
-#svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-autotimeset ./package/luci-app-autotimeset
-#chmod -R 755 ./package/luci-app-autotimeset/*
-
-#svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-aria2 ./package/luci-app-aria2
-#chmod -R 755 ./package/luci-app-aria2/*
-#svn co https://github.com/sirpdboy/sirpdboy-package/trunk/aria2 ./package/aria2
-#chmod -R 755 ./package/aria2/*
 
 #sirpdboy qt5报错删除
 rm -rf ./package/sirpdboy/qt5
