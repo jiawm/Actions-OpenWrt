@@ -82,7 +82,4 @@ chmod -R 755 ./package/netdata/*
 
 
 
-#sirpdboy qt5报错删除
-rm -rf ./package/sirpdboy/qt5
-
 
