@@ -36,18 +36,17 @@ rm -rf ./package/lean/luci-theme-argon && git clone -b 18.06 https://github.com/
 wget -O ./package/lean/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg https://github.com/jiawm/My-OpenWrt-by-Lean/raw/main/BackGround/1.jpg
 
 #git lua-maxminddb 依赖
-git clone https://github.com/jerrykuku/lua-maxminddb.git package/lean/lua-maxminddb
+#git clone https://github.com/jerrykuku/lua-maxminddb.git package/lean/lua-maxminddb
 
 # Add WOL Plus
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-wolplus ./package/luci-app-wolplus
 chmod -R 755 ./package/luci-app-wolplus/*
 
 # Add luci-app-socat
-# svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-socat ./package/luci-app-socat
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-socat ./package/luci-app-socat
-chmod -R 755 ./package/luci-app-socat/*
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/socat ./package/socat
-chmod -R 755 ./package/socat/*
+#svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-socat ./package/luci-app-socat
+#chmod -R 755 ./package/luci-app-socat/*
+#svn co https://github.com/sirpdboy/sirpdboy-package/trunk/socat ./package/socat
+#chmod -R 755 ./package/socat/*
 
 #替换为sirpdboy中文版netdata
 rm -rf ./package/lean/luci-app-netdata 
@@ -60,17 +59,16 @@ chmod -R 755 ./package/netdata/*
 #git clone -b master https://github.com/vernesong/OpenClash.git package/OpenClash
 
 # Add ADGuardHome
-# git clone https://github.com/rufengsuixing/luci-app-adguardhome package/luci-app-adguardhome
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-adguardhome ./package/luci-app-adguardhome
 chmod -R 755 ./package/luci-app-adguardhome/*
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/adguardhome ./package/adguardhome
-# sed -i 's/        /	/g' ./package/adguardhome/Makefile
 chmod -R 755 ./package/adguardhome/*
 
 # Add luci-app-advanced
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-advanced ./package/luci-app-advanced
-chmod -R 755 ./package/luci-app-advanced/*
+#svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-advanced ./package/luci-app-advanced
+#chmod -R 755 ./package/luci-app-advanced/*
 
+#以下添加sirpdboy管控内容
 # Add luci-app-control-weburl
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-control-weburl ./package/luci-app-control-weburl
 chmod -R 755 ./package/luci-app-control-weburl/*
