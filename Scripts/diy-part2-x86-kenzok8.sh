@@ -86,8 +86,15 @@ svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-autotimeset .
 chmod -R 755 ./package/luci-app-autotimeset/*
 
 #删除与K大重复app
-rm -rf ./package/kenzok8/AdGuardHome
-rm -rf ./package/kenzok8/luci-app-adguardhome
-rm -rf ./package/kenzok8/luci-app-autotimeset
-rm -rf ./package/kenzok8/luci-app-advanced
-rm -rf ./package/kenzok8/lua-maxminddb
+rm -rf ./package/kenzo/AdGuardHome
+rm -rf ./package/kenzo/luci-app-adguardhome
+rm -rf ./package/kenzo/luci-app-autotimeset
+rm -rf ./package/kenzo/luci-app-advanced
+rm -rf ./package/kenzo/lua-maxminddb
+
+
+
+
+
+
+
