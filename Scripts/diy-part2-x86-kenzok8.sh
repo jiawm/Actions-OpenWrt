@@ -12,6 +12,18 @@
 # 修改openwrt登陆地址,把下面的192.168.2.1修改成你想要的就可以了，其他的不要动
 sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generate
 
+# Remove the default apps 移除默认编译app，不是删除app
+sed -i 's/luci-app-zerotier //g' target/linux/x86/Makefile
+sed -i 's/luci-app-unblockmusic //g' target/linux/x86/Makefile
+sed -i 's/luci-app-xlnetacc //g' target/linux/x86/Makefile
+sed -i 's/luci-app-jd-dailybonus //g' target/linux/x86/Makefile
+sed -i 's/luci-app-ipsec-vpnd //g' target/linux/x86/Makefile
+sed -i 's/luci-app-adbyby-plus //g' target/linux/x86/Makefile
+sed -i 's/luci-app-sfe //g' target/linux/x86/Makefile
+sed -i 's/luci-app-uugamebooster//g' target/linux/x86/Makefile
+sed -i 's/-luci-app-flowoffload//g' target/linux/x86/Makefile
+sed -i 's/kmod-drm-amdgpu \\/kmod-drm-amdgpu/g' target/linux/x86/Makefile
+
 
 #更换默认主题为argon，并删除bootstrap主题
 sed -i 's#luci-theme-bootstrap#luci-theme-argon#g' feeds/luci/collections/luci/Makefile
