@@ -39,7 +39,7 @@ wget -O ./package/lean/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg htt
 git clone https://github.com/jerrykuku/lua-maxminddb.git package/lean/lua-maxminddb
 
 # Add WOL Plus
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-services-wolplus ./package/luci-app-wolplus
+svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-wolplus ./package/luci-app-wolplus
 chmod -R 755 ./package/luci-app-wolplus/*
 
 # Add luci-app-socat
@@ -76,14 +76,19 @@ chmod -R 755 ./package/luci-app-control-weburl/*
 # Add luci-app-wrtbwmon
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-wrtbwmon ./package/luci-app-wrtbwmon
 chmod -R 755 ./package/luci-app-wrtbwmon/*
+svn co https://github.com/sirpdboy/sirpdboy-package/trunk/wrtbwmon ./package/wrtbwmon
+chmod -R 755 ./package/wrtbwmon/*
+
 
 # Add luci-app-cpulimit
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-cpulimit ./package/luci-app-cpulimit
 chmod -R 755 ./package/luci-app-cpulimit/*
+svn co https://github.com/sirpdboy/sirpdboy-package/trunk/cpulimit ./package/cpulimit
+chmod -R 755 ./package/cpulimit/*
 
-# Add luci-app-autotimeset
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-autotimeset ./package/luci-app-autotimeset
-chmod -R 755 ./package/luci-app-autotimeset/*
+# Add luci-app-autotimeset s大删除了该app
+#svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-autotimeset ./package/luci-app-autotimeset
+#chmod -R 755 ./package/luci-app-autotimeset/*
 
 #删除与K大重复app
 rm -rf ./package/kenzo/AdGuardHome
