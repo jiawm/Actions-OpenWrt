@@ -56,3 +56,19 @@ chmod -R 755 ./package/adguardhome/*
 # Add luci-app-advanced
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-advanced ./package/luci-app-advanced
 chmod -R 755 ./package/luci-app-advanced/*
+
+# Add luci-app-control-weburl
+svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-control-weburl ./package/luci-app-control-weburl
+chmod -R 755 ./package/luci-app-control-weburl/*
+
+# Add luci-app-wrtbwmon
+svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-wrtbwmon ./package/luci-app-wrtbwmon
+chmod -R 755 ./package/luci-app-wrtbwmon/*
+
+# Add luci-app-cpulimit
+svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-cpulimit ./package/luci-app-cpulimit
+chmod -R 755 ./package/luci-app-cpulimit/*
+
+# Add luci-app-autotimeset
+svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-autotimeset ./package/luci-app-autotimeset
+chmod -R 755 ./package/luci-app-autotimeset/*
