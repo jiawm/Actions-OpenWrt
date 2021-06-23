@@ -55,7 +55,7 @@ svn co https://github.com/sirpdboy/sirpdboy-package/trunk/netdata ./package/netd
 chmod -R 755 ./package/netdata/*
 
 # Add OpenClash
-git clone -b master https://github.com/vernesong/OpenClash.git package/OpenClash
+#git clone -b master https://github.com/vernesong/OpenClash.git package/OpenClash
 
 # Add ADGuardHome
 # git clone https://github.com/rufengsuixing/luci-app-adguardhome package/luci-app-adguardhome
@@ -84,3 +84,9 @@ chmod -R 755 ./package/luci-app-cpulimit/*
 # Add luci-app-autotimeset
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-autotimeset ./package/luci-app-autotimeset
 chmod -R 755 ./package/luci-app-autotimeset/*
+
+#删除与K大重复app
+rm -rf ./package/kenzok8/AdGuardHome
+rm -rf ./package/kenzok8/luci-app-autotimeset
+rm -rf ./package/kenzok8/luci-app-advanced
+rm -rf ./package/kenzok8/lua-maxminddb
