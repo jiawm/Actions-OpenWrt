@@ -27,7 +27,7 @@ wget -O ./package/lean/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg htt
 git clone https://github.com/jerrykuku/lua-maxminddb.git package/lean/lua-maxminddb
 
 # Add WOL Plus
-svn co https://github.com/sundaqiang/openwrt-packages/trunk/luci-app-services-wolplus ./package/luci-app-wolplus
+svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-services-wolplus ./package/luci-app-wolplus
 chmod -R 755 ./package/luci-app-wolplus/*
 
 # Add luci-app-socat
@@ -35,5 +35,24 @@ chmod -R 755 ./package/luci-app-wolplus/*
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-socat ./package/luci-app-socat
 chmod -R 755 ./package/luci-app-socat/*
 
+#替换为sirpdboy中文版netdata
+rm -rf ./package/lean/luci-app-netdata 
+svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-netdata ./package/luci-app-netdata
+chmod -R 755 ./package/luci-app-netdata/*
+svn co https://github.com/sirpdboy/sirpdboy-package/trunk/netdata ./package/netdata
+chmod -R 755 ./package/netdata/*
 
+# Add OpenClash
+git clone -b master https://github.com/vernesong/OpenClash.git package/OpenClash
 
+# Add ADGuardHome
+# git clone https://github.com/rufengsuixing/luci-app-adguardhome package/luci-app-adguardhome
+svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-adguardhome ./package/luci-app-adguardhome
+chmod -R 755 ./package/luci-app-adguardhome/*
+svn co https://github.com/sirpdboy/sirpdboy-package/trunk/adguardhome ./package/adguardhome
+# sed -i 's/        /	/g' ./package/adguardhome/Makefile
+chmod -R 755 ./package/adguardhome/*
+
+# Add luci-app-advanced
+svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-advanced ./package/luci-app-advanced
+chmod -R 755 ./package/luci-app-advanced/*
