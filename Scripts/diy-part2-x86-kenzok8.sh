@@ -87,6 +87,7 @@ chmod -R 755 ./package/luci-app-autotimeset/*
 
 #删除与K大重复app
 rm -rf ./package/kenzok8/AdGuardHome
+rm -rf ./package/kenzok8/luci-app-adguardhome
 rm -rf ./package/kenzok8/luci-app-autotimeset
 rm -rf ./package/kenzok8/luci-app-advanced
 rm -rf ./package/kenzok8/lua-maxminddb
