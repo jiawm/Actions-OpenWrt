@@ -59,10 +59,10 @@ chmod -R 755 ./package/netdata/*
 #git clone -b master https://github.com/vernesong/OpenClash.git package/OpenClash
 
 # Add ADGuardHome
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-adguardhome ./package/luci-app-adguardhome
-chmod -R 755 ./package/luci-app-adguardhome/*
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/adguardhome ./package/adguardhome
-chmod -R 755 ./package/adguardhome/*
+#svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-adguardhome ./package/luci-app-adguardhome
+#chmod -R 755 ./package/luci-app-adguardhome/*
+#svn co https://github.com/sirpdboy/sirpdboy-package/trunk/adguardhome ./package/adguardhome
+#chmod -R 755 ./package/adguardhome/*
 
 # Add luci-app-advanced
 #svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-advanced ./package/luci-app-advanced
