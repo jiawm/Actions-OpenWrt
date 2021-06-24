@@ -13,6 +13,7 @@
 sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generate
 
 # Remove the default apps 移除默认编译app，不是删除app
+sed -i 's/luci-app-ssr-plus //g' target/linux/x86/Makefile
 sed -i 's/luci-app-zerotier //g' target/linux/x86/Makefile
 sed -i 's/luci-app-unblockmusic //g' target/linux/x86/Makefile
 sed -i 's/luci-app-xlnetacc //g' target/linux/x86/Makefile
@@ -86,17 +87,18 @@ chmod -R 755 ./package/luci-app-cpulimit/*
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/cpulimit ./package/cpulimit
 chmod -R 755 ./package/cpulimit/*
 
-# Add luci-app-autotimeset s大删除了该app
-#svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-autotimeset ./package/luci-app-autotimeset
-#chmod -R 755 ./package/luci-app-autotimeset/*
+# Add S大修改的网速控制（主要在管控菜单下）
+svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-eqos ./package/luci-app-eqos
+chmod -R 755 ./package/luci-app-eqos/*
+
+
 
 #删除与K大重复app
-rm -rf ./package/kenzo/AdGuardHome
-rm -rf ./package/kenzo/luci-app-adguardhome
-rm -rf ./package/kenzo/luci-app-autotimeset
-rm -rf ./package/kenzo/luci-app-advanced
-rm -rf ./package/kenzo/lua-maxminddb
 
+rm -rf ./package/kenzo/luci-app-eqos #k大的在网络下
+rm -rf ./package/kenzo/luci-app-autotimeset
+rm -rf ./package/kenzo/lua-maxminddb
+#rm -rf ./package/kenzo/luci-app-advanced
 
 
 
