@@ -43,10 +43,10 @@ svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-wolplus ./pac
 chmod -R 755 ./package/luci-app-wolplus/*
 
 # Add luci-app-socat
-#svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-socat ./package/luci-app-socat
-#chmod -R 755 ./package/luci-app-socat/*
-#svn co https://github.com/sirpdboy/sirpdboy-package/trunk/socat ./package/socat
-#chmod -R 755 ./package/socat/*
+svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-socat ./package/luci-app-socat
+chmod -R 755 ./package/luci-app-socat/*
+svn co https://github.com/sirpdboy/sirpdboy-package/trunk/socat ./package/socat
+chmod -R 755 ./package/socat/*
 
 #替换为sirpdboy中文版netdata
 rm -rf ./package/lean/luci-app-netdata 
