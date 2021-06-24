@@ -95,7 +95,7 @@ chmod -R 755 ./package/luci-app-eqos/*
 
 #删除与K大重复app
 rm -rf ./package/kenzo/luci-app-eqos #k大的在网络下
-rm -rf ./package/kenzo/lua-maxminddb
+
 
 
 
