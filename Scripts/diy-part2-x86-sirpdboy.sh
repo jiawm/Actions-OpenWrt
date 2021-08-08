@@ -12,6 +12,11 @@
 #修改openwrt登陆地址,把下面的192.168.2.1修改成你想要的就可以了，其他的不要动
 sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generate
 
+# 切换ramips内核为 5.10
+sed -i 's/5.4/5.10/g' ./target/linux/ramips/Makefile
+
+# 切换ramips内核为 5.10
+sed -i 's/5.4/5.10/g' ./target/linux/x86/Makefile
 
 # Remove the default apps 移除默认编译app，不是移除app
 sed -i 's/luci-app-zerotier //g' target/linux/x86/Makefile
