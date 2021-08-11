@@ -15,7 +15,7 @@ sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generat
 # 切换ramips内核为 5.10
 sed -i 's/5.4/5.10/g' ./target/linux/ramips/Makefile
 
-# 切换ramips内核为 5.10
+# 切换x86内核为 5.10
 sed -i 's/5.4/5.10/g' ./target/linux/x86/Makefile
 
 # Remove the default apps 移除默认编译app，不是移除app
