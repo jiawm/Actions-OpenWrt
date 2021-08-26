@@ -29,4 +29,4 @@ git clone https://github.com/kenzok8/openwrt-packages.git package/kenzo
 git clone https://github.com/jiawm/luci-app-poweroff.git package/poweroff
 git clone https://github.com/linkease/nas-packages.git package/nas #添加ddnsto和linkease
 
-
+git clone https://github.com/destan19/OpenAppFilter.git package/openappfilter  #测试2021-8-26添加应用过滤
