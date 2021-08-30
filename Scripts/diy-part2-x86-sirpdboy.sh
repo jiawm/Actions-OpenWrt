@@ -83,7 +83,7 @@ chmod -R 755 ./package/luci-app-netdata/*
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/netdata ./package/netdata
 chmod -R 755 ./package/netdata/*
 
-# Add WOL Plus
+# Add adguardhome
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-adguardhome ./package/luci-app-adguardhome
 chmod -R 755 ./package/luci-app-adguardhome/*
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/adguardhome ./package/adguardhome
