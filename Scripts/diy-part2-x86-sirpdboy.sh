@@ -84,6 +84,8 @@ svn co https://github.com/sirpdboy/sirpdboy-package/trunk/netdata ./package/netd
 chmod -R 755 ./package/netdata/*
 
 # Add adguardhome
+rm -rf ./package/sirpdboy/luci-app-adguardhome 
+rm -rf ./package/sirpdboy/adguardhome
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-adguardhome ./package/luci-app-adguardhome
 chmod -R 755 ./package/luci-app-adguardhome/*
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/adguardhome ./package/adguardhome
