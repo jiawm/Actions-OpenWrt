@@ -27,5 +27,5 @@ git clone https://github.com/xiaorouji/openwrt-passwall.git package/lienol
 #git clone https://github.com/fw876/helloworld.git package/hellowrold
 git clone https://github.com/kenzok8/openwrt-packages.git package/kenzo
 git clone https://github.com/jiawm/luci-app-poweroff.git package/poweroff
-git clone https://github.com/linkease/nas-packages.git package/nas #添加ddnsto和linkease
+#git clone https://github.com/linkease/nas-packages-luci package/nas #添加ddnsto和linkease
 
