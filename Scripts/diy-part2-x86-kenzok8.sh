@@ -54,11 +54,11 @@ svn co https://github.com/sirpdboy/sirpdboy-package/trunk/socat ./package/socat
 chmod -R 755 ./package/socat/*
 
 #替换为sirpdboy中文版netdata
-rm -rf ./package/lean/luci-app-netdata 
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-netdata ./package/luci-app-netdata
-chmod -R 755 ./package/luci-app-netdata/*
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/netdata ./package/netdata
-chmod -R 755 ./package/netdata/*
+#rm -rf ./package/lean/luci-app-netdata 
+#svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-netdata ./package/luci-app-netdata
+#chmod -R 755 ./package/luci-app-netdata/*
+#svn co https://github.com/sirpdboy/sirpdboy-package/trunk/netdata ./package/netdata
+#chmod -R 755 ./package/netdata/*
 
 # Add OpenClash
 #git clone -b master https://github.com/vernesong/OpenClash.git package/OpenClash
@@ -76,14 +76,21 @@ chmod -R 755 ./package/wrtbwmon/*
 
 
 # Add luci-app-cpulimit
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-cpulimit ./package/luci-app-cpulimit
-chmod -R 755 ./package/luci-app-cpulimit/*
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/cpulimit ./package/cpulimit
-chmod -R 755 ./package/cpulimit/*
+#svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-cpulimit ./package/luci-app-cpulimit
+#chmod -R 755 ./package/luci-app-cpulimit/*
+#svn co https://github.com/sirpdboy/sirpdboy-package/trunk/cpulimit ./package/cpulimit
+#chmod -R 755 ./package/cpulimit/*
 
 # Add S大修改的网速控制（主要在管控菜单下）
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-eqos ./package/luci-app-eqos
 chmod -R 755 ./package/luci-app-eqos/*
+
+#Add luci-app-dockerman
+svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-dockerman ./package/luci-app-dockerman
+chmod -R 755 ./package/luci-app-dockerman/*
+svn co https://github.com/sirpdboy/sirpdboy-package/trunk/dockerman ./package/dockerman
+chmod -R 755 ./package/dockerman/*
+
 
 #删除与K大重复app
 rm -rf ./package/kenzo/luci-app-eqos #k大的在网络下
