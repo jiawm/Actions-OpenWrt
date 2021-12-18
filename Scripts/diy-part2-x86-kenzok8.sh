@@ -88,10 +88,10 @@ svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-eqos ./packag
 chmod -R 755 ./package/luci-app-eqos/*
 
 #Add luci-app-dockerman
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-dockerman ./package/luci-app-dockerman
-chmod -R 755 ./package/luci-app-dockerman/*
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/dockerman ./package/dockerman
-chmod -R 755 ./package/dockerman/*
+#svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-dockerman ./package/luci-app-dockerman
+#chmod -R 755 ./package/luci-app-dockerman/*
+#svn co https://github.com/sirpdboy/sirpdboy-package/trunk/dockerman ./package/dockerman
+#chmod -R 755 ./package/dockerman/*
 
 
 #删除与K大重复app
