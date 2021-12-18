@@ -21,25 +21,30 @@ sed -i 's/5.4/5.10/g' ./target/linux/x86/Makefile
 sed -i 's/invalid/# invalid/g' package/network/services/samba36/files/smb.conf.template
 
 # Remove the default apps 移除默认编译app，不是删除app
-sed -i 's/luci-app-ssr-plus //g' target/linux/x86/Makefile
 sed -i 's/luci-app-zerotier //g' target/linux/x86/Makefile
 sed -i 's/luci-app-unblockmusic //g' target/linux/x86/Makefile
 sed -i 's/luci-app-xlnetacc //g' target/linux/x86/Makefile
 sed -i 's/luci-app-jd-dailybonus //g' target/linux/x86/Makefile
 sed -i 's/luci-app-ipsec-vpnd //g' target/linux/x86/Makefile
 sed -i 's/luci-app-adbyby-plus //g' target/linux/x86/Makefile
-sed -i 's/luci-app-sfe //g' target/linux/x86/Makefile
+sed -i 's/luci-app-qbittorrent //g' target/linux/x86/Makefile
+sed -i 's/luci-app-dockerman //g' target/linux/x86/Makefile
+# sed -i 's/luci-app-sfe //g' target/linux/x86/Makefile
 sed -i 's/luci-app-uugamebooster//g' target/linux/x86/Makefile
-sed -i 's/-luci-app-flowoffload//g' target/linux/x86/Makefile
-sed -i 's/kmod-drm-amdgpu \\/kmod-drm-amdgpu/g' target/linux/x86/Makefile
+# sed -i 's/-luci-app-flowoffload//g' target/linux/x86/Makefile
+# sed -i 's/kmod-drm-amdgpu \\/kmod-drm-amdgpu/g' target/linux/x86/Makefile
+sed -e '/luci-app-filetransfer/d' include/target.mk
+sed -e '/luci-app-vlmcsd/d' include/target.mk
+sed -e '/luci-app-flowoffload/d' include/target.mk
 
 
-#更换默认主题为argon，并删除bootstrap主题
-sed -i 's#luci-theme-bootstrap#luci-theme-argon#g' feeds/luci/collections/luci/Makefile
-sed -i 's/bootstrap/argon/g' feeds/luci/modules/luci-base/root/etc/config/luci
+#更换默认主题为argon
+sed -i 's/bootstrap/argon/g' feeds/luci/collections/luci/Makefile
 
-#删除lean大集成的旧版argon主题，更换为新版argon主题
-rm -rf ./package/lean/luci-theme-argon && git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon  
+#删除lean大集成的旧版argon主题，更换为新版argon主题#Change Argon Theme
+rm -rf ./package/lean/luci-theme-argon  
+git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git ./package/luci-theme-argon
+git clone https://github.com/jerrykuku/luci-app-argon-config.git ./package/luci-app-argon-config
 
 # Change default BackGround img
 wget -O ./package/lean/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg https://github.com/jiawm/My-OpenWrt-by-Lean/raw/main/BackGround/2.jpg
