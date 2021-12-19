@@ -18,20 +18,19 @@ sed -i 's/5.4/5.10/g' ./target/linux/ramips/Makefile
 
 # 切换x86内核为 5.10
 sed -i 's/5.4/5.10/g' ./target/linux/x86/Makefile
+
 # 添加温度显示
 sed -i 's/invalid/# invalid/g' package/network/services/samba36/files/smb.conf.template
 
 
 #删除lean大集成的旧版argon主题，更换为新版argon主题#Change Argon Theme
-rm -rf ./package/lean/luci-theme-argon  
-git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git ./package/luci-theme-argon
-git clone https://github.com/jerrykuku/luci-app-argon-config.git ./package/luci-app-argon-config
+rm -rf ./package/lean/luci-theme-argon && git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
 
 #更换默认主题为argon
 sed -i 's/bootstrap/argon/g' feeds/luci/collections/luci/Makefile
 
 # Change default BackGround img
-wget -O ./package/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg https://github.com/jiawm/My-OpenWrt-by-Lean/raw/main/BackGround/2.jpg
+wget -O ./package/lean/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg https://github.com/jiawm/My-OpenWrt-by-Lean/raw/main/BackGround/2.jpg
 
 # 修改openwrt登陆地址,把下面的192.168.2.1修改成你想要的就可以了，其他的不要动
 sed -i 's/192.168.1.1/192.168.100.102/g' package/base-files/files/bin/config_generate
