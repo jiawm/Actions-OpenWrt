@@ -19,7 +19,7 @@ sed -i 's/5.4/5.10/g' ./target/linux/ramips/Makefile
 # 切换x86内核为 5.10
 sed -i 's/5.4/5.10/g' ./target/linux/x86/Makefile
 # 添加温度显示
-sed -i 's/invalid/# invalid/g' package/network/services/samba36/files/smb.conf.template
+# sed -i 's/invalid/# invalid/g' package/network/services/samba36/files/smb.conf.template
 
 
 #删除lean大集成的旧版argon主题，更换为新版argon主题#Change Argon Theme
