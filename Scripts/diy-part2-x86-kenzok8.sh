@@ -39,22 +39,34 @@ rm -rf ./package/lean/luci-theme-argon && git clone -b 18.06 https://github.com/
 # 修改openwrt登陆地址,把下面的192.168.2.1修改成你想要的就可以了，其他的不要动
 sed -i 's/192.168.1.1/192.168.100.102/g' package/base-files/files/bin/config_generate
 
-# Remove the default apps 移除默认编译app，不是删除app
+# Remove the default apps 移除默认编译app，不是移除app
 sed -i 's/luci-app-zerotier //g' target/linux/x86/Makefile
 sed -i 's/luci-app-unblockmusic //g' target/linux/x86/Makefile
 sed -i 's/luci-app-xlnetacc //g' target/linux/x86/Makefile
 sed -i 's/luci-app-jd-dailybonus //g' target/linux/x86/Makefile
 sed -i 's/luci-app-ipsec-vpnd //g' target/linux/x86/Makefile
 sed -i 's/luci-app-adbyby-plus //g' target/linux/x86/Makefile
-sed -i 's/luci-app-qbittorrent //g' target/linux/x86/Makefile
-sed -i 's/luci-app-dockerman //g' target/linux/x86/Makefile
-# sed -i 's/luci-app-sfe //g' target/linux/x86/Makefile
+sed -i 's/luci-app-sfe //g' target/linux/x86/Makefile
 sed -i 's/luci-app-uugamebooster//g' target/linux/x86/Makefile
+sed -i 's/-luci-app-flowoffload//g' target/linux/x86/Makefile
+sed -i 's/kmod-drm-amdgpu \\/kmod-drm-amdgpu/g' target/linux/x86/Makefile
+
+# Remove the default apps 移除默认编译app，不是删除app
+# sed -i 's/luci-app-zerotier //g' target/linux/x86/Makefile
+# sed -i 's/luci-app-unblockmusic //g' target/linux/x86/Makefile
+# sed -i 's/luci-app-xlnetacc //g' target/linux/x86/Makefile
+# sed -i 's/luci-app-jd-dailybonus //g' target/linux/x86/Makefile
+# sed -i 's/luci-app-ipsec-vpnd //g' target/linux/x86/Makefile
+# sed -i 's/luci-app-adbyby-plus //g' target/linux/x86/Makefile
+# sed -i 's/luci-app-qbittorrent //g' target/linux/x86/Makefile
+# sed -i 's/luci-app-dockerman //g' target/linux/x86/Makefile
+# sed -i 's/luci-app-sfe //g' target/linux/x86/Makefile
+# sed -i 's/luci-app-uugamebooster//g' target/linux/x86/Makefile
 # sed -i 's/-luci-app-flowoffload//g' target/linux/x86/Makefile
 # sed -i 's/kmod-drm-amdgpu \\/kmod-drm-amdgpu/g' target/linux/x86/Makefile
-sed -e '/luci-app-filetransfer/d' include/target.mk
-sed -e '/luci-app-vlmcsd/d' include/target.mk
-sed -e '/luci-app-flowoffload/d' include/target.mk
+# sed -e '/luci-app-filetransfer/d' include/target.mk
+# sed -e '/luci-app-vlmcsd/d' include/target.mk
+# sed -e '/luci-app-flowoffload/d' include/target.mk
 
 
 # Add WOL Plus
