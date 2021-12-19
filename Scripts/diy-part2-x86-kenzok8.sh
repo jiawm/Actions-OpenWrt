@@ -9,8 +9,9 @@
 # File name: diy-part2.sh
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 #
-# 修改openwrt登陆地址,把下面的192.168.2.1修改成你想要的就可以了，其他的不要动
-sed -i 's/192.168.1.1/192.168.100.102/g' package/base-files/files/bin/config_generate
+#
+#
+
 
 # 切换ramips内核为 5.10
 sed -i 's/5.4/5.10/g' ./target/linux/ramips/Makefile
@@ -19,6 +20,21 @@ sed -i 's/5.4/5.10/g' ./target/linux/ramips/Makefile
 sed -i 's/5.4/5.10/g' ./target/linux/x86/Makefile
 # 添加温度显示
 sed -i 's/invalid/# invalid/g' package/network/services/samba36/files/smb.conf.template
+
+
+#删除lean大集成的旧版argon主题，更换为新版argon主题#Change Argon Theme
+rm -rf ./package/lean/luci-theme-argon  
+git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git ./package/luci-theme-argon
+git clone https://github.com/jerrykuku/luci-app-argon-config.git ./package/luci-app-argon-config
+
+#更换默认主题为argon
+sed -i 's/bootstrap/argon/g' feeds/luci/collections/luci/Makefile
+
+# Change default BackGround img
+wget -O ./package/lean/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg https://github.com/jiawm/My-OpenWrt-by-Lean/raw/main/BackGround/2.jpg
+
+# 修改openwrt登陆地址,把下面的192.168.2.1修改成你想要的就可以了，其他的不要动
+sed -i 's/192.168.1.1/192.168.100.102/g' package/base-files/files/bin/config_generate
 
 # Remove the default apps 移除默认编译app，不是删除app
 sed -i 's/luci-app-zerotier //g' target/linux/x86/Makefile
@@ -38,21 +54,17 @@ sed -e '/luci-app-vlmcsd/d' include/target.mk
 sed -e '/luci-app-flowoffload/d' include/target.mk
 
 
-#更换默认主题为argon
-sed -i 's/bootstrap/argon/g' feeds/luci/collections/luci/Makefile
-
-#删除lean大集成的旧版argon主题，更换为新版argon主题#Change Argon Theme
-rm -rf ./package/lean/luci-theme-argon  
-git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git ./package/luci-theme-argon
-git clone https://github.com/jerrykuku/luci-app-argon-config.git ./package/luci-app-argon-config
-
-# Change default BackGround img
-wget -O ./package/lean/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg https://github.com/jiawm/My-OpenWrt-by-Lean/raw/main/BackGround/2.jpg
-
-
 # Add WOL Plus
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-wolplus ./package/luci-app-wolplus
 chmod -R 755 ./package/luci-app-wolplus/*
+
+# Add Hello World
+git clone https://github.com/jerrykuku/lua-maxminddb.git package/lean/lua-maxminddb
+#git lua-maxminddb 依赖
+git clone https://github.com/jerrykuku/luci-app-vssr.git package/lean/luci-app-vssr
+
+# Add Passwall
+git clone https://github.com/xiaorouji/openwrt-passwall package/openwrt-passwall
 
 # Add luci-app-socat
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-socat ./package/luci-app-socat
@@ -68,7 +80,7 @@ chmod -R 755 ./package/socat/*
 #chmod -R 755 ./package/netdata/*
 
 # Add OpenClash
-#git clone -b master https://github.com/vernesong/OpenClash.git package/OpenClash
+git clone -b master https://github.com/vernesong/OpenClash.git package/OpenClash
 
 #以下添加sirpdboy管控内容
 # Add luci-app-control-weburl
