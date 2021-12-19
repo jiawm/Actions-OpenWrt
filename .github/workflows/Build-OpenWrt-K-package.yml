@@ -23,6 +23,7 @@ env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
+  model: x86
   CONFIG_FILE: MenuConfig/x86-kenzok8.config
   DIY_P1_SH: Scripts/diy-part1-x86-kenzok8.sh
   DIY_P2_SH: Scripts/diy-part2-x86-kenzok8.sh
