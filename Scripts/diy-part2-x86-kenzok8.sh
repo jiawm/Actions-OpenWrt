@@ -33,9 +33,6 @@ rm -rf ./package/lean/luci-theme-argon && git clone -b 18.06 https://github.com/
 #git lua-maxminddb 依赖
 git clone https://github.com/jerrykuku/lua-maxminddb.git package/lean/lua-maxminddb
 
-#更换默认主题为argon
-#sed -i 's/bootstrap/argon/g' feeds/luci/collections/luci/Makefile
-
 # Change default BackGround img
 # wget -O ./package/lean/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg https://github.com/jiawm/My-OpenWrt-by-Lean/raw/main/BackGround/2.jpg
 
