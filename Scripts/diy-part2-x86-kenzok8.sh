@@ -26,6 +26,9 @@ sed -i 's/invalid/# invalid/g' package/network/services/samba36/files/smb.conf.t
 #删除lean大集成的旧版argon主题，更换为新版argon主题#Change Argon Theme
 rm -rf ./package/lean/luci-theme-argon && git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
 
+#git lua-maxminddb 依赖
+git clone https://github.com/jerrykuku/lua-maxminddb.git package/lean/lua-maxminddb
+
 #更换默认主题为argon
 sed -i 's/bootstrap/argon/g' feeds/luci/collections/luci/Makefile
 
