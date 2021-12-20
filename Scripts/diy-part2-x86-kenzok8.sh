@@ -100,9 +100,9 @@ chmod -R 755 ./package/wrtbwmon/*
 #svn co https://github.com/sirpdboy/sirpdboy-package/trunk/cpulimit ./package/cpulimit
 #chmod -R 755 ./package/cpulimit/*
 
-# Add S大修改的网速控制（主要在管控菜单下）
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-eqos ./package/luci-app-eqos
-chmod -R 755 ./package/luci-app-eqos/*
+# Add S大修改的网速控制（主要在管控菜单下），本固件不使用S大，使用K大eqos，故不删除K大默认eqos
+#svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-eqos ./package/luci-app-eqos
+#chmod -R 755 ./package/luci-app-eqos/*
 
 #Add luci-app-dockerman
 #svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-dockerman ./package/luci-app-dockerman
@@ -111,8 +111,8 @@ chmod -R 755 ./package/luci-app-eqos/*
 #chmod -R 755 ./package/dockerman/*
 
 
-#删除与K大重复app
-rm -rf ./package/kenzo/luci-app-eqos #k大的在网络下
+#删除与K大重复app 使用k大，不删除
+#rm -rf ./package/kenzo/luci-app-eqos #k大的在网络下
 
 
 
