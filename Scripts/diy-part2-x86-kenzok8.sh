@@ -23,13 +23,13 @@ sed -i 's/invalid/# invalid/g' package/network/services/samba36/files/smb.conf.t
 #添加主题
 git clone https://github.com/sirpdboy/luci-theme-opentopd package/luci-theme-opentopd
 
-#更换默认主题为opentopd，并删除bootstrap主题
+#更换默认主题为opentopd，并删除bootstrap主题 可以使用
 #sed -i 's#luci-theme-bootstrap#luci-theme-opentopd#g' feeds/luci/collections/luci/Makefile
 #sed -i 's/bootstrap/opentopd/g' feeds/luci/modules/luci-base/root/etc/config/luci
 
-#更换默认主题为argon，并删除bootstrap主题
-sed -i 's#luci-theme-bootstrap#luci-theme-argon#g' feeds/luci/collections/luci/Makefile
-sed -i 's/bootstrap/argon/g' feeds/luci/modules/luci-base/root/etc/config/luci
+#更换默认主题为argon，并删除bootstrap主题 有错误代码
+#sed -i 's#luci-theme-bootstrap#luci-theme-argon#g' feeds/luci/collections/luci/Makefile
+#sed -i 's/bootstrap/argon/g' feeds/luci/modules/luci-base/root/etc/config/luci
 
 #删除lean大集成的旧版argon主题，更换为新版argon主题#Change Argon Theme
 rm -rf ./package/lean/luci-theme-argon && git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
