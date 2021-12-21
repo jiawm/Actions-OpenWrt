@@ -21,22 +21,22 @@ sed -i 's/5.4/5.10/g' ./target/linux/x86/Makefile
 sed -i 's/invalid/# invalid/g' package/network/services/samba36/files/smb.conf.template
 
 #添加主题
-git clone https://github.com/sirpdboy/luci-theme-opentopd package/luci-theme-opentopd
+#git clone https://github.com/sirpdboy/luci-theme-opentopd package/luci-theme-opentopd
 
 #更换默认主题为opentopd，并删除bootstrap主题 可以使用
 #sed -i 's#luci-theme-bootstrap#luci-theme-opentopd#g' feeds/luci/collections/luci/Makefile
 #sed -i 's/bootstrap/opentopd/g' feeds/luci/modules/luci-base/root/etc/config/luci
 
 #更换默认主题为argon，并删除bootstrap主题 有错误代码
-#sed -i 's#luci-theme-bootstrap#luci-theme-argon#g' feeds/luci/collections/luci/Makefile
-#sed -i 's/bootstrap/argon/g' feeds/luci/modules/luci-base/root/etc/config/luci
+sed -i 's#luci-theme-bootstrap#luci-theme-argon#g' feeds/luci/collections/luci/Makefile
+sed -i 's/bootstrap/argon/g' feeds/luci/modules/luci-base/root/etc/config/luci
 
 #删除lean大集成的旧版argon主题，更换为新版argon主题#Change Argon Theme 可能lean已经克隆了这个地址
-#rm -rf ./package/lean/luci-theme-argon && git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
+rm -rf ./package/lean/luci-theme-argon && git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
 
 
 # Change default BackGround img
-# wget -O ./package/lean/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg https://github.com/jiawm/My-OpenWrt-by-Lean/raw/main/BackGround/2.jpg
+wget -O ./package/lean/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg https://github.com/jiawm/My-OpenWrt-by-Lean/raw/main/BackGround/2.jpg
 
 # 修改openwrt登陆地址,把下面的192.168.2.1修改成你想要的就可以了，其他的不要动
 sed -i 's/192.168.1.1/192.168.100.102/g' package/base-files/files/bin/config_generate
