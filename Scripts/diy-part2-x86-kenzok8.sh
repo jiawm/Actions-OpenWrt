@@ -34,6 +34,9 @@ sed -i 's/bootstrap/argon/g' feeds/luci/modules/luci-base/root/etc/config/luci
 #删除lean大集成的旧版argon主题，更换为新版argon主题#Change Argon Theme 可能lean已经克隆了这个地址
 rm -rf ./package/lean/luci-theme-argon && git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
 
+#添加argon主题设置插件
+git clone https://github.com/jerrykuku/luci-app-argon-config.git ./package/lean/luci-theme-argon
+
 
 # Change default BackGround img
 wget -O ./package/lean/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg https://github.com/jiawm/My-OpenWrt-by-Lean/raw/main/BackGround/2.jpg
