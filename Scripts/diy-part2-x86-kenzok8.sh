@@ -21,8 +21,7 @@ sed -i 's/5.4/5.10/g' ./target/linux/x86/Makefile
 # sed -i 's/invalid/# invalid/g' package/network/services/samba36/files/smb.conf.template
 
 #添加主题
-#git clone https://github.com/sirpdboy/luci-theme-opentopd package/luci-theme-opentopd
-git clone https://github.com/jiawm/sirpdboy-package/tree/main/luci-theme-opentopd
+git clone https://github.com/sirpdboy/luci-theme-opentopd package/luci-theme-opentopd
 
 #更换默认主题为opentopd，并删除bootstrap主题 可以使用
 #sed -i 's#luci-theme-bootstrap#luci-theme-opentopd#g' feeds/luci/collections/luci/Makefile
