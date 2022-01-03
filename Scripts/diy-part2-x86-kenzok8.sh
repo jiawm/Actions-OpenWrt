@@ -90,6 +90,10 @@ git clone -b master https://github.com/vernesong/OpenClash.git package/OpenClash
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-control-weburl ./package/luci-app-control-weburl
 chmod -R 755 ./package/luci-app-control-weburl/*
 
+#Add luci-app-koolproxyR
+svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-koolproxyR ./package/luci-app-koolproxyR
+chmod -R 755 ./package/luci-app-koolproxyR/*
+
 # Add luci-app-wrtbwmon
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-wrtbwmon ./package/luci-app-wrtbwmon
 chmod -R 755 ./package/luci-app-wrtbwmon/*
