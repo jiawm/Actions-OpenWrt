@@ -27,7 +27,7 @@ git clone https://github.com/sirpdboy/luci-theme-opentopd package/luci-theme-ope
 #sed -i 's#luci-theme-bootstrap#luci-theme-opentopd#g' feeds/luci/collections/luci/Makefile
 #sed -i 's/bootstrap/opentopd/g' feeds/luci/modules/luci-base/root/etc/config/luci
 
-#更换默认主题为argon，并删除bootstrap主题 有错误代码
+#更换默认主题为argon，并删除bootstrap主题 
 sed -i 's#luci-theme-bootstrap#luci-theme-argon#g' feeds/luci/collections/luci/Makefile
 sed -i 's/bootstrap/argon/g' feeds/luci/modules/luci-base/root/etc/config/luci
 
@@ -90,9 +90,16 @@ git clone -b master https://github.com/vernesong/OpenClash.git package/OpenClash
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-control-weburl ./package/luci-app-control-weburl
 chmod -R 755 ./package/luci-app-control-weburl/*
 
-#Add luci-app-koolproxyR有BUG无法正常运行2022-1-5
+#Add luci-app-koolproxyR sirpdboy有BUG无法正常运行2022-1-5，添加kiddin9的ikoolproxy
 #svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-koolproxyR ./package/luci-app-koolproxyR
 #chmod -R 755 ./package/luci-app-koolproxyR/*
+svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-ikoolproxy ./package/luci-app-ikoolproxy
+chmod -R 755 ./package/luci-app-ikoolproxy/*
+
+#Add luci-app-dnsfilter
+svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-dnsfilter ./package/luci-app-dnsfilter
+chmod -R 755 ./package/luci-app-dnsfilter/*
+
 
 # Add luci-app-wrtbwmon
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-wrtbwmon ./package/luci-app-wrtbwmon
