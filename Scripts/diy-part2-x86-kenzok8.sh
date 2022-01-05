@@ -95,6 +95,8 @@ chmod -R 755 ./package/luci-app-control-weburl/*
 #chmod -R 755 ./package/luci-app-koolproxyR/*
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-ikoolproxy ./package/luci-app-ikoolproxy
 chmod -R 755 ./package/luci-app-ikoolproxy/*
+svn co https://github.com/kiddin9/openwrt-packages/trunk/ikoolproxy ./package/ikoolproxy
+chmod -R 755 ./package/ikoolproxy/*
 
 #Add luci-app-dnsfilter
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-dnsfilter ./package/luci-app-dnsfilter
