@@ -90,13 +90,11 @@ git clone -b master https://github.com/vernesong/OpenClash.git package/OpenClash
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-control-weburl ./package/luci-app-control-weburl
 chmod -R 755 ./package/luci-app-control-weburl/*
 
-#Add luci-app-koolproxyR sirpdboy有BUG无法正常运行2022-1-5，添加kiddin9的ikoolproxy
-#svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-koolproxyR ./package/luci-app-koolproxyR
-#chmod -R 755 ./package/luci-app-koolproxyR/*
-svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-ikoolproxy ./package/luci-app-ikoolproxy
-chmod -R 755 ./package/luci-app-ikoolproxy/*
-svn co https://github.com/kiddin9/openwrt-packages/trunk/ikoolproxy ./package/ikoolproxy
-chmod -R 755 ./package/ikoolproxy/*
+#Add 添加kiddin9的ikoolproxy
+#svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-ikoolproxy ./package/luci-app-ikoolproxy
+#chmod -R 755 ./package/luci-app-ikoolproxy/*
+#svn co https://github.com/kiddin9/openwrt-packages/trunk/ikoolproxy ./package/ikoolproxy
+#chmod -R 755 ./package/ikoolproxy/*
 
 #Add luci-app-dnsfilter
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-dnsfilter ./package/luci-app-dnsfilter
