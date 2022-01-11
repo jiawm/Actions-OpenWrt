@@ -51,13 +51,20 @@ sed -i 's/kmod-drm-amdgpu \\/kmod-drm-amdgpu/g' target/linux/x86/Makefile
 # remove lede linked luci-app-pushbot k大包自带pushbot
 rm -rf ./package/lean/luci-app-pushbot
 
+sed -i 's/invalid/# invalid/g' package/network/services/samba36/files/smb.conf.template
+
+# 注释默认防火墙规则
+sed -i "s/echo 'iptables/echo '# iptables/g" ./package/lean/default-settings/files/zzz-default-settings
+sed -i "s/echo '\[ -n/echo '# \[ -n/g" ./package/lean/default-settings/files/zzz-default-settings
+
+
 # Add WOL Plus
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-wolplus ./package/luci-app-wolplus
 chmod -R 755 ./package/luci-app-wolplus/*
 
-# Add Hello World
+#  git lua-maxminddb 依赖
 git clone https://github.com/jerrykuku/lua-maxminddb.git package/lean/lua-maxminddb
-#git lua-maxminddb 依赖
+# Add Hello World
 git clone https://github.com/jerrykuku/luci-app-vssr.git package/lean/luci-app-vssr
 
 # Add Passwall
