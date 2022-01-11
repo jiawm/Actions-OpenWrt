@@ -48,6 +48,8 @@ sed -i 's/luci-app-uugamebooster//g' target/linux/x86/Makefile
 sed -i 's/-luci-app-flowoffload//g' target/linux/x86/Makefile
 sed -i 's/kmod-drm-amdgpu \\/kmod-drm-amdgpu/g' target/linux/x86/Makefile
 
+# remove lede linked luci-app-pushbot k大包自带pushbot
+rm -rf ./package/lean/luci-app-pushbot
 
 # Add WOL Plus
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-wolplus ./package/luci-app-wolplus
