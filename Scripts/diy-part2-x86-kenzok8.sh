@@ -59,7 +59,7 @@ sed -i "s/echo '\[ -n/echo '# \[ -n/g" ./package/lean/default-settings/files/zzz
 
 
 # Add WOL Plus
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-wolplus ./package/luci-app-wolplus
+svn co https://github.com/sundaqiang/openwrt-packages/trunk/luci-app-wolplus ./package/luci-app-wolplus
 chmod -R 755 ./package/luci-app-wolplus/*
 
 #  git lua-maxminddb 依赖
