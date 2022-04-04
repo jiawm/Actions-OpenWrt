@@ -11,7 +11,7 @@
 
 
 # 切换ramips内核为 5.10
-sed -i 's/5.4/5.10/g' ./target/linux/ramips/Makefile
+#sed -i 's/5.4/5.10/g' ./target/linux/ramips/Makefile
 
 # 切换x86内核为 5.10
 # sed -i 's/5.4/5.10/g' ./target/linux/x86/Makefile
@@ -72,8 +72,8 @@ rm -rf ./package/lean/luci-app-pushbot
 sed -i 's/invalid/# invalid/g' package/network/services/samba36/files/smb.conf.template
 
 # 注释默认防火墙规则
-sed -i "s/echo 'iptables/echo '# iptables/g" ./package/lean/default-settings/files/zzz-default-settings
-sed -i "s/echo '\[ -n/echo '# \[ -n/g" ./package/lean/default-settings/files/zzz-default-settings
+#sed -i "s/echo 'iptables/echo '# iptables/g" ./package/lean/default-settings/files/zzz-default-settings
+#sed -i "s/echo '\[ -n/echo '# \[ -n/g" ./package/lean/default-settings/files/zzz-default-settings
 
 
 # Add WOL Plus
