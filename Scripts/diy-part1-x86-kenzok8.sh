@@ -27,6 +27,6 @@ echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.co
 #sed -i '$a src-git helloworld https://github.com/fw876/helloworld
 #sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages
 git clone https://github.com/kenzok8/openwrt-packages.git package/kenzo
-git clone https://github.com/jiawm/luci-app-poweroff.git package/poweroff
+#git clone https://github.com/jiawm/luci-app-poweroff.git package/poweroff
 #git clone https://github.com/linkease/nas-packages-luci package/nas #添加ddnsto和linkease
 
