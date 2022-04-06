@@ -11,7 +11,7 @@
 
 
 # 切换ramips内核为 5.10
-#sed -i 's/5.4/5.10/g' ./target/linux/ramips/Makefile
+# sed -i 's/5.4/5.10/g' ./target/linux/ramips/Makefile
 
 # 切换x86内核为 5.10
 # sed -i 's/5.4/5.10/g' ./target/linux/x86/Makefile
@@ -37,10 +37,6 @@ git clone https://github.com/jerrykuku/luci-app-argon-config.git ./package/luci-
 wget -O ./package/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg https://github.com/jiawm/My-OpenWrt-by-Lean/raw/main/BackGround/2.jpg
 svn co https://github.com/xylz0928/luci-mod/trunk/feeds/luci/modules/luci-base/htdocs/luci-static/resources/icons ./package/lucimod
 mv package/lucimod/* feeds/luci/modules/luci-base/htdocs/luci-static/resources/icons/
-
-
-#添加argon主题设置插件
-git clone https://github.com/jerrykuku/luci-app-argon-config.git ./package/lean/luci-app-argon-config
 
 
 #更换默认主题为argon，并删除bootstrap主题 
