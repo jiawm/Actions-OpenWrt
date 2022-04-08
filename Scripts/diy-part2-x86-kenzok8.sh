@@ -65,7 +65,6 @@ sed -i 's/kmod-drm-amdgpu \\/kmod-drm-amdgpu/g' target/linux/x86/Makefile
 # remove lede linked luci-app-pushbot k大包自带pushbot
 rm -rf ./package/lean/luci-app-pushbot
 
-sed -i 's/invalid/# invalid/g' package/network/services/samba36/files/smb.conf.template
 
 # 注释默认防火墙规则
 #sed -i "s/echo 'iptables/echo '# iptables/g" ./package/lean/default-settings/files/zzz-default-settings
@@ -77,32 +76,33 @@ svn co https://github.com/sundaqiang/openwrt-packages/trunk/luci-app-wolplus ./p
 chmod -R 755 ./package/luci-app-wolplus/*
 
 #  git lua-maxminddb 依赖
-git clone https://github.com/jerrykuku/lua-maxminddb.git package/lean/lua-maxminddb
+# git clone https://github.com/jerrykuku/lua-maxminddb.git package/lean/lua-maxminddb
+
 # Add Hello World
-git clone https://github.com/jerrykuku/luci-app-vssr.git package/lean/luci-app-vssr
+# git clone https://github.com/jerrykuku/luci-app-vssr.git package/lean/luci-app-vssr
 
 # Add Passwall
-git clone https://github.com/xiaorouji/openwrt-passwall package/openwrt-passwall
+# git clone https://github.com/xiaorouji/openwrt-passwall package/openwrt-passwall
 
 # Add luci-app-socat
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-socat ./package/luci-app-socat
-chmod -R 755 ./package/luci-app-socat/*
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/socat ./package/socat
-chmod -R 755 ./package/socat/*
+# svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-socat ./package/luci-app-socat
+# chmod -R 755 ./package/luci-app-socat/*
+# svn co https://github.com/sirpdboy/sirpdboy-package/trunk/socat ./package/socat
+# chmod -R 755 ./package/socat/*
 
 # Add OpenClash
-git clone -b master https://github.com/vernesong/OpenClash.git package/OpenClash
+# git clone -b master https://github.com/vernesong/OpenClash.git package/OpenClash
 
 #以下添加sirpdboy管控内容 Add luci-app-control-weburl
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-control-weburl ./package/luci-app-control-weburl
-chmod -R 755 ./package/luci-app-control-weburl/*
+# svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-control-weburl ./package/luci-app-control-weburl
+# chmod -R 755 ./package/luci-app-control-weburl/*
 
 
 # Add luci-app-wrtbwmon
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-wrtbwmon ./package/luci-app-wrtbwmon
-chmod -R 755 ./package/luci-app-wrtbwmon/*
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/wrtbwmon ./package/wrtbwmon
-chmod -R 755 ./package/wrtbwmon/*
+# svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-wrtbwmon ./package/luci-app-wrtbwmon
+# chmod -R 755 ./package/luci-app-wrtbwmon/*
+# svn co https://github.com/sirpdboy/sirpdboy-package/trunk/wrtbwmon ./package/wrtbwmon
+# chmod -R 755 ./package/wrtbwmon/*
 
 
 #以下为旧版代码，目前不再使用。
