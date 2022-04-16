@@ -64,7 +64,15 @@ sed -i 's/kmod-drm-amdgpu \\/kmod-drm-amdgpu/g' target/linux/x86/Makefile
 
 # remove lede linked luci-app-pushbot k大包自带pushbot
 rm -rf ./package/lean/luci-app-pushbot
+#删除k大app
+rm -rf ./package/kenzo/luci-app-adguardhome
+rm -rf ./package/kenzo/adguardhome
 
+#添加281677160包
+svn co https://github.com/281677160/openwrt-package/trunk/luci-app-adguardhome ./package/luci-app-adguardhome
+chmod -R 755 ./package/luci-app-adguardhome/*
+svn co https://github.com/281677160/openwrt-package/trunk/adguardhome ./package/adguardhome
+chmod -R 755 ./package/adguardhome/*
 
 # 注释默认防火墙规则
 #sed -i "s/echo 'iptables/echo '# iptables/g" ./package/lean/default-settings/files/zzz-default-settings
